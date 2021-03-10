@@ -1,16 +1,14 @@
 <img src="https://bit.ly/2VnXWr2" alt="Ironhack Logo" width="100"/>
 
-# Title of My Project
-*[Your Name]*
+# Staying informed without the work
+*Alex jurado*
 
-*[Your Cohort, Campus & Date]*
+*Jan2021 Data Analytics *
 
 ## Content
 - [Project Description](#project-description)
-- [Hypotheses / Questions](#hypotheses-questions)
 - [Dataset](#dataset)
 - [Cleaning](#cleaning)
-- [Analysis](#analysis)
 - [Model Training and Evaluation](#model-training-and-evaluation)
 - [Conclusion](#conclusion)
 - [Future Work](#future-work)
@@ -19,54 +17,38 @@
 - [Links](#links)
 
 ## Project Description
-Write a short description of your project: 3-5 sentences about what your project is about, why you chose this topic (if relevant), and what you are trying to show.
+Script that once executed will scrape a few newspapers and generate a summary and a visualization as well as email the user the results. 
 
-## Hypotheses / Questions
-* What data/business/research/personal question you would like to answer?
-* What is the context for the question and the possible scientific or business application?
-* What are the hypotheses you would like to test in order to answer your question?  
-Frame your hypothesis with statistical/data languages (i.e. define Null and Alternative Hypothesis). You can use formulas if you want but that is not required.
 
 ## Dataset
-* Where did you get your data? If you downloaded a dataset (either public or private), describe where you downloaded it and include the command to load the dataset.
-* Did you build your own datset? If so, did you use an API or a web scraper? PRovide the relevant scripts in your repo.
-* For all types of datasets, provide a description of the size, complexity, and data types included in your dataset, as well as a schema of the tables if necessary.
-* If the question cannot be answered with the available data, why not? What data would you need to answer it better?
+* Due to the nature of the project the dataset will change everyday and the previous days one will be discarded. Down the line, a copy could be saved. 
+* Each day six data frames are generated and kept separate to avoid contaminating each other.
 
 ## Cleaning
-Describe your full process of data wrangling and cleaning. Document why you chose to fill missing values, extract outliers, or create the variables you did as well as your reasoning behind the process.
+Cleaning was done using regex and removing all unwanted characters to facilitate the tokenization of the 6 separate dataframes.
 
-## Analysis
-* Overview the general steps you went through to analyze your data in order to test your hypothesis.
-* Document each step of your data exploration and analysis.
-* Include charts to demonstrate the effect of your work.
-* If you used Machine Learning in your final project, describe your feature selection process.
 
 ## Model Training and Evaluation
-*Include this section only if you chose to include ML in your project.*
-* Describe how you trained your model, the results you obtained, and how you evaluated those results.
+There was no model training. We used a hugging face transformer named for a pre trained BART model 
+* The model combines BERT and GPT3 for the encoder-decoder architecture. 
 
 ## Conclusion
-* Summarize your results. What do they mean?
-* What can you say about your hypotheses?
-* Interpret your findings in terms of the questions you try to answer.
+* The main challenge was the pdf generation as well as understanding and using the pre trained model. 
 
 ## Future Work
-Address any questions you were unable to answer, or any next steps or future extensions to your project.
+Full automatisation by moving the notebook to a google colab notebook
 
 ## Workflow
-Outline the workflow you used in your project. What were the steps?
-How did you test the accuracy of your analysis and/or machine learning algorithm?
+Data collection and cleaning was the first step followed by modelling and finally the pdf and emailer generation
 
 ## Organization
-How did you organize your work? Did you use any tools like a trello or kanban board?
+Used Trello as well as a very structured Notebook to do all the work
 
-What does your repository look like? Explain your folder and file structure.
+Currently there is one notebook that will run once a day as well as folders to hold the word clouds. 
 
 ## Links
-Include links to your repository, slides and trello/kanban board. Feel free to include any other links associated with your project.
 
 
-[Repository](https://github.com/)  
-[Slides](https://slides.com/)  
-[Trello](https://trello.com/en)  
+
+[Repository](https://github.com/Stereo-Alex/Project-Week-8-Final-Project)  
+[Trello](https://trello.com/b/VvdxmLI6/final-project)  
